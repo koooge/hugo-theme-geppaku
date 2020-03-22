@@ -1,0 +1,60 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.68.1"><link rel="shortcut icon" href=/hugo-theme-geppaku/images/favicon.ico><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css><script src=https://apis.google.com/js/platform.js async defer>{lang:'ja'}</script><link rel=stylesheet type=text/css href=/hugo-theme-geppaku/css/style.css><title>How to install Geppaku theme | your site title</title></head><body><div id=wrap><header class=site-header><div class=site-header-left><a class=site-header-title href=https://koooge.github.io/hugo-theme-geppaku/>your site title</a></div></header><div class=container><div id=main><div class=article><header><div class=article-header><h1>How to install Geppaku theme</h1><div class=article-meta><span class=posttime>2016/05/03</span><div class=tags><ul><li><a href=/hugo-theme-geppaku/tags/hugo>Hugo</a></li><li><a href=/hugo-theme-geppaku/tags/hugo-theme>Hugo theme</a></li></ul></div></div></div><div id=share-buttons><ul><li><a href=https://twitter.com/share class=twitter-share-button data-via="your twitter id">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','twitter-wjs');</script></li><li><div class=g-plusone data-size=medium></div></li></ul></div></header><div class=content><p>Geppaku is bluish white theme for <a href=http://gohugo.io/>Hugo</a>.<br>It is color name in Japan. Chinese character is &ldquo;月白&rdquo;.</p><blockquote><p>月白（げっぱく）とは、月の光を思わせる薄い青みを含んだ白色のことです。
+via <a href=http://irocore.com/geppaku/>http://irocore.com/geppaku/</a></p></blockquote><p>Geppaku is the white color including a thin blue that reminiscent of the light of the moon.<br>(If that translate is wrong, please inform me using PullRequest.)</p><h2 id=screenshot>Screenshot</h2><h3 id=index-page>Index page</h3><p><img src=/images/2016/05/03/list.png alt=list></p><h3 id=post-page>Post page</h3><p><img src=/images/2016/05/03/screenshot.png alt=post></p><h2 id=installation>Installation</h2><pre><code>$ mkdir themes
+$ cd themes
+$ git clone https://github.com/masa0221/hugo-theme-geppaku hugo-theme-geppaku
+</code></pre><p>See the Hugo documentation for more information.</p><h3 id=config>Config</h3><p>Example of config.toml file:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>baseurl</span> = <span style=color:#e6db74>&#34;http://your-site-here/&#34;</span>
+<span style=color:#a6e22e>languageCode</span> = <span style=color:#e6db74>&#34;en-us&#34;</span>
+<span style=color:#a6e22e>title</span> = <span style=color:#e6db74>&#34;your site title&#34;</span>
+<span style=color:#a6e22e>theme</span>= <span style=color:#e6db74>&#34;hugo-theme-geppaku&#34;</span>
+<span style=color:#a6e22e>googleAnalytics</span> = <span style=color:#e6db74>&#34;&#34;</span> <span style=color:#75715e># Optional</span>
+<span style=color:#a6e22e>disqusShortname</span> = <span style=color:#e6db74>&#34;&#34;</span> <span style=color:#75715e># Optional</span>
+
+[<span style=color:#a6e22e>author</span>]
+    <span style=color:#75715e># If you want to display author information set these</span>
+    <span style=color:#75715e># This is Optional values</span>
+    <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;Your name&#34;</span>
+
+    <span style=color:#75715e># Please set account ids</span>
+    <span style=color:#75715e># This is Optional values</span>
+    <span style=color:#a6e22e>twitter</span>  = <span style=color:#e6db74>&#34;your twitter id&#34;</span>
+    <span style=color:#a6e22e>linkedin</span> = <span style=color:#e6db74>&#34;your linkedin id&#34;</span>
+    <span style=color:#a6e22e>github</span>   = <span style=color:#e6db74>&#34;your github id&#34;</span>
+
+[<span style=color:#a6e22e>params</span>]
+    [<span style=color:#a6e22e>params</span>.<span style=color:#a6e22e>sharebutton</span>]
+        <span style=color:#75715e># If you want to display share buttons set these</span>
+        <span style=color:#75715e># This is Optional values</span>
+        <span style=color:#a6e22e>twitter</span>  = <span style=color:#66d9ef>true</span>
+        <span style=color:#a6e22e>facebook</span> = <span style=color:#66d9ef>true</span>
+        <span style=color:#75715e># hatena   = true # hatena is Japanese social media</span>
+        <span style=color:#a6e22e>google</span>   = <span style=color:#66d9ef>true</span>
+        <span style=color:#a6e22e>pocket</span>   = <span style=color:#66d9ef>true</span>
+        <span style=color:#75715e># Please set id when you want to display facebook</span>
+        <span style=color:#a6e22e>facebookAppId</span> = <span style=color:#e6db74>&#34;your app id&#34;</span>
+
+    [<span style=color:#a6e22e>params</span>.<span style=color:#a6e22e>adsense</span>]
+        <span style=color:#75715e># If you want to display Google adsense set these</span>
+        <span style=color:#75715e># This is Optional values</span>
+        <span style=color:#75715e># 1. Create file written of the adsense tag into the directory &#34;layouts/partials&#34;</span>
+        <span style=color:#75715e># 2. Please set file path name omitted &#34;layouts/partials&#34;</span>
+        <span style=color:#a6e22e>sidebar</span> = <span style=color:#e6db74>&#34;adsense/sidebar.html&#34;</span>
+        <span style=color:#a6e22e>content</span> = <span style=color:#e6db74>&#34;adsense/content.html&#34;</span>
+</code></pre></div><p>You can delete optional parameter.
+Please delete unnecessary parameter.</p><h3 id=new-post>New Post</h3><h4 id=create-markdown-file>Create markdown file</h4><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>hugo new post/2016/05/hello-hugo.md
+</code></pre></div><h4 id=example-of-the-toml-file>Example of the toml file</h4><pre><code>+++
+date = &quot;2016-04-30T16:44:45+09:00&quot;
+draft = false
+title = &quot;Hello Hugo!&quot;
+slug = &quot;hello-hugo&quot;
+categories = [&quot;tech&quot;]
+tags = [
+  &quot;hugo&quot;,
+  &quot;golang&quot;,
+  ]
++++
+Hello Hugo!
+</code></pre></div><footer><div class=article-footer><div class=tags><ul><li><a href=/hugo-theme-geppaku/tags/hugo>Hugo</a></li><li><a href=/hugo-theme-geppaku/tags/hugo-theme>Hugo theme</a></li></ul></div><div id=share-buttons><ul><li><a href=https://twitter.com/share class=twitter-share-button data-via="your twitter id">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','twitter-wjs');</script></li><li><div class=g-plusone data-size=medium></div></li></ul></div><div id=pagenavigation-next-prev><div id=pagenavigation-prev><span class=pagenav-label>Next</span>
+<a href=https://koooge.github.io/hugo-theme-geppaku/post/2016/05/sample-post-10/>Sample Post 10</a></div></div></div></footer></div></div><div class=sidebar><div class=sidebar-content><div class=sidebar-header><span>Author</span></div><div id=author><span>Your name</span><div><a href=https://twitter.com/your%20twitter%20id><i class="fab fa-twitter-square fa-2x" aria-hidden=true></i></a><a href=https://github.com/your%20github%20id><i class="fab fa-github-square fa-2x" aria-hidden=true></i></a><a href=https://www.linkedin.com/in/your%20linkedin%20id><i class="fab fa-linkedin fa-2x" aria-hidden=true></i></a></div></div></div><div class=sidebar-content><div class=sidebar-header><span>Categories</span></div><div class=categories><ul><li><a href=/hugo-theme-geppaku/categories/sample><span></span>sample (10)</a></li><li><a href=/hugo-theme-geppaku/categories/technology><span></span>technology (1)</a></li></ul></div></div><div class=sidebar-content><div class=sidebar-header><span>RSS</span></div><div id=rss><a href=https://koooge.github.io/hugo-theme-geppaku/index.xml type=application/rss+xml target=_blank><i class="fa fa-rss-square fa-2x" aria-hidden=true></i></a></div></div></div></div><footer><div id=site-footer-wrap><div id=site-footer><span>Powered by <a href=https://gohugo.io/>Hugo</a>.</span>
+<span>Copyright (c) 2016, <a href=https://koooge.github.io/hugo-theme-geppaku/>your site title</a></span></div></div></footer></div></body></html>
