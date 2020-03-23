@@ -12,7 +12,6 @@ html, body {
 
 body {
   font-family: sans-serif;
-  font-display: swap;
 }
 
 img {
@@ -154,6 +153,16 @@ a:hover {
   color: #747474;
   margin-bottom: 4px;
   padding-left: 5px;
+}
+
+a .inline-svg {
+  text-decoration: none;
+}
+
+.inline-svg {
+  display: inline-block;
+  width: 28px;
+  height: 32px;
 }
 
 /**
