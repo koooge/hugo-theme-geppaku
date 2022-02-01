@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Theme for Hugo",
   "scripts": {
-    "lint": "stylelint '**/*.css'"
+    "lint": "stylelint '**/*.css' --fix"
   },
   "repository": {
     "type": "git",
