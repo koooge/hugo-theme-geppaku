@@ -1,0 +1,22 @@
+{
+  "name": "@koooge/hugo-theme-geppaku",
+  "version": "0.1.0",
+  "description": "Theme for Hugo",
+  "scripts": {
+    "lint": "stylelint '**/*.css'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koooge/hugo-theme-geppaku.git"
+  },
+  "author": "koooge <koooooge@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koooge/hugo-theme-geppaku/issues"
+  },
+  "homepage": "https://github.com/koooge/hugo-theme-geppaku#readme",
+  "devDependencies": {
+    "stylelint": "^14.3.0",
+    "stylelint-config-standard": "^24.0.0"
+  }
+}
