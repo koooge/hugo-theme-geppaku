@@ -104,6 +104,7 @@ a:hover {
   clear: left;
   color: #303030;
   margin-bottom: 10px;
+  word-break: break-word;
 }
 
 .article .content .heading {
@@ -393,10 +394,6 @@ h4::before {
   display: inline-block;
 }
 
-.article .content {
-  word-break: break-word;
-}
-
 .article .content ul,
 .article .content ol,
 .article .content p {
@@ -554,10 +551,6 @@ h4::before {
 
 .article-footer .tags {
   margin-bottom: 70px;
-}
-
-#disqus_thread {
-  margin-bottom: 30px;
 }
 
 #pagenavigation-next-prev {
