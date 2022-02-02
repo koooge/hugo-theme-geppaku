@@ -289,7 +289,6 @@ a .inline-svg {
 
 #site-footer {
   clear: left;
-  padding-top: 10px;
   min-height: 50px;
   height: 50px;
   padding: 25px 0 0 20px;
@@ -484,10 +483,7 @@ h4::before {
  * pager
  */
 #pager {
-  margin-top: 20px;
-  margin-bottom: 30px;
   overflow: hidden;
-  padding-top: 20px;
   margin: 20px auto 30px;
   width: 60%;
 }
@@ -620,10 +616,9 @@ h4::before {
   .sidebar {
     clear: left;
     float: none;
-    margin-left: 10px;
     width: auto;
     padding: 0;
-    margin: 0 auto 70px;
+    margin: 0 auto 70px 10px;
   }
 
   .sidebar-header {
