@@ -576,7 +576,7 @@ h4::before {
 /**
  * responsive styles
  */
-@media screen and (max-width: 950px) {
+@media screen and (width <= 950px) {
   img {
     float: none;
   }
@@ -643,7 +643,7 @@ h4::before {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (width <= 600px) {
   h1 {
     font-size: 25px;
   }
