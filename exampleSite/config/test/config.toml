@@ -1,5 +1,3 @@
 staticDir = ["../static", "../images"]
 assetDir = "../assets"
 canonifyURLs = true
-
-googleAnalytics = "G-2GMRFCH6DG"
