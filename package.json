@@ -1,6 +1,7 @@
 {
   "name": "@koooge/hugo-theme-geppaku",
   "version": "0.1.0",
+  "private": true,
   "description": "Theme for Hugo",
   "scripts": {
     "lint": "stylelint '**/*.css' --fix"
@@ -16,7 +17,7 @@
   },
   "homepage": "https://github.com/koooge/hugo-theme-geppaku#readme",
   "devDependencies": {
-    "stylelint": "^15.7.0",
+    "stylelint": "^15.8.0",
     "stylelint-config-standard": "^33.0.0"
   },
   "engines": {
