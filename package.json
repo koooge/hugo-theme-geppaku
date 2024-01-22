@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/koooge/hugo-theme-geppaku#readme",
   "devDependencies": {
-    "stylelint": "^16.1.0",
+    "stylelint": "^16.2.0",
     "stylelint-config-standard": "^36.0.0"
   },
   "engines": {
