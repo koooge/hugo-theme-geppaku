@@ -98,3 +98,9 @@ tags = [
 +++
 Hello Hugo!
 ```
+
+## Test
+
+```sh
+hugo server --configDir ./exampleSite/config --config ./exampleSite/config/test/config.toml --themesDir ./ --layoutDir ./layouts
+```
