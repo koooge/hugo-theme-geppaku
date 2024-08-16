@@ -102,5 +102,5 @@ Hello Hugo!
 ## Test
 
 ```sh
-hugo server --configDir ./exampleSite/config --config ./exampleSite/config/test/config.toml --themesDir ./ --layoutDir ./layouts
+hugo server --configDir ./exampleSite/config --config ./exampleSite/config/test/config.toml --themesDir ./ --layoutDir ./layouts --contentDir ./exampleSite/content
 ```
