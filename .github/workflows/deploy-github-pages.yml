@@ -21,9 +21,7 @@ jobs:
           hugo --gc --minify --themesDir ../ --layoutDir ../layouts --config config/test/config.toml --baseURL "${BASE_URL}"
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
         with:
-          #deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./exampleSite/public
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
