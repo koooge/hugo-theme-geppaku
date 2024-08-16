@@ -15,13 +15,12 @@ jobs:
           hugo-version: '0.114.0'
           extended: false
       - name: Build
-        working-directory: ./exampleSite
         run: |
           export BASE_URL="https://koooge.github.io/hugo-theme-geppaku/"
-          hugo --gc --minify --themesDir ../ --layoutDir ../layouts --config config/test/config.toml --baseURL "${BASE_URL}"
+          hugo --gc --minify --configDir ./exampleSite/config exampleSite/config.toml --themesDir ./ --layoutDir ./layouts --config config/test/config.toml --baseURL "${BASE_URL}"
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./exampleSite/public
+          publish_dir: ./public
