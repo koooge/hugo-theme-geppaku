@@ -25,7 +25,6 @@ jobs:
           hugo-version: '0.132.2'
           extended: false
       - name: Build
-        working-directory: ./exampleSite
         run: |
           export BASE_URL="https://koooge.github.io/hugo-theme-geppaku/"
-          hugo --gc --minify --themesDir ../ --layoutDir ../layouts --config config/test/config.toml --baseURL "${BASE_URL}"
+          hugo --gc --minify --configDir ./exampleSite/config --config ./exampleSite/config/test/config.toml --themesDir ./ --layoutDir ./layouts --contentDir ./exampleSite/content --baseURL "${BASE_URL}"
