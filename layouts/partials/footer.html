@@ -6,7 +6,7 @@
         {{ if .Site.Copyright }}
         {{ .Site.Copyright | markdownify}}
         {{ else }}
-        Copyright (c) {{ .Site.LastChange.Format "2006" }}, <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+        Copyright (c) {{ .Site.Lastmod.Format "2006" }}, <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
         {{ end }}
       </span>
     </div>

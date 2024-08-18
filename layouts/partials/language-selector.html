@@ -1,4 +1,4 @@
-{{- if and .Site.IsMultiLingual (not .Site.Params.DisableLanguageSwitchingButton)}}
+{{- if and hugo.IsMultilingual (not .Site.Params.DisableLanguageSwitchingButton)}}
 {{ range .Page.AllTranslations }}
   <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
 {{ end }}
