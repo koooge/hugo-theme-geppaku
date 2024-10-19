@@ -45,21 +45,21 @@ disqusShortname = ""
 
     # Please set account ids
     # This is Optional values
-    twitter  = "your twitter id"
-    linkedin = "your linkedin id"
-    github   = "your github id"
-    tumblr   = "your tumblr id"
+    x_twitter = "your x id"
+    linkedin  = "your linkedin id"
+    github    = "your github id"
+    tumblr    = "your tumblr id"
 
 [params]
     [params.sharebutton]
         # If you want to display share buttons set these
         # This is Optional values
-        twitter  = true
-        facebook = true
-        tumblr   = true
+        x_twitter = true
+        facebook  = true
+        tumblr    = true
         # hatena   = true # hatena is Japanese social media
-        google   = true
-        pocket   = true
+        google    = true
+        pocket    = true
         # Please set id when you want to display facebook
         facebookAppId = "your app id"
 
