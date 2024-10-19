@@ -8,5 +8,5 @@ features = ["blog"]
 min_version = 0.132.2
 
 [author]
-  name = "The Geppaku Authors"
-  homepage = "http://koooge.com/"
+  name = "koooge"
+  homepage = "https://koooge.com/"
