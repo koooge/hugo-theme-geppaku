@@ -21,8 +21,8 @@
     <div id="author">
       <span>{{ .Site.Author.name }}</span>
       <div>
-        {{ with .Site.Author.twitter }}
-        <a href="https://twitter.com/{{ . }}" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "twitter-square"}}</a>
+        {{ with .Site.Author.x_twitter | default .Site.Author.twitter }}
+        <a href="https://x.com/{{ . }}" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "square-x-twitter-brands-solid"}}</a>
         {{ end }}
         {{ with .Site.Author.github }}
         <a href="https://github.com/{{ . }}" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "github-square" }}</a>
