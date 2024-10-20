@@ -49,6 +49,7 @@ disqusShortname = ""
     linkedin  = "your linkedin id"
     github    = "your github id"
     tumblr    = "your tumblr id"
+    bluesky   = "your bluesky id"
 
 [params]
     [params.sharebutton]
@@ -62,6 +63,7 @@ disqusShortname = ""
         pocket    = true
         # Please set id when you want to display facebook
         facebookAppId = "your app id"
+        bluesky   = true
 
     [params.adsense]
         # If you want to display Google adsense set these

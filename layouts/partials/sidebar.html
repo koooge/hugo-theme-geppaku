@@ -33,6 +33,9 @@
         {{ with .Site.Author.tumblr }}
         <a href="https://{{ . }}.tumblr.com/" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "tumblr-square" }}</a>
         {{ end }}
+        {{ with .Site.Author.bluesky }}
+        <a href="https://bsky.app/profile/{{ . }}" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "bluesky-brands-solid" }}</a>
+        {{ end }}
       </div>
     </div>
   </div>
