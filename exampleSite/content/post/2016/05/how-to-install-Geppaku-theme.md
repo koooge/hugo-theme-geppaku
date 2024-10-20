@@ -55,8 +55,9 @@ disqusShortname = "" # Optional
     # Please set account ids
     # This is Optional values
     x_twitter  = "your twitter id"
-    linkedin = "your linkedin id"
-    github   = "your github id"
+    linkedin   = "your linkedin id"
+    github     = "your github id"
+    bluesky    = "your bluesky id"
 
 [params]
     [params.sharebutton]
@@ -69,6 +70,7 @@ disqusShortname = "" # Optional
         pocket     = true
         # Please set id when you want to display facebook
         facebookAppId = "your app id"
+        bluesky    = true
 
     [params.adsense]
         # If you want to display Google adsense set these
