@@ -104,7 +104,7 @@ a:hover {
   clear: left;
   color: #303030;
   margin-bottom: 10px;
-  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .article .content .heading {
@@ -402,7 +402,7 @@ h4::before {
 .article .content pre {
   overflow: auto;
   white-space: pre-wrap;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   margin-bottom: 20px;
 }
 
