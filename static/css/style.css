@@ -37,7 +37,7 @@ a:hover {
 }
 
 .container {
-  width: 1000px;
+  width: 1200px;
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 50px;
@@ -82,7 +82,7 @@ a:hover {
  * articles
  */
 .article {
-  width: 590px;
+  width: 650px;
   padding: 0 20px 20px;
   clear: left;
   overflow: hidden;
@@ -130,15 +130,7 @@ a:hover {
   font-size: 14px;
 }
 
-.article .content a:hover :not(.heading) {
-  font-size: 14px;
-}
-
 .article .tags a {
-  font-size: 10px;
-}
-
-.article .tags a:hover {
   font-size: 10px;
 }
 
@@ -149,8 +141,7 @@ a:hover {
   width: 310px;
   float: right;
   min-height: 200px;
-  height: 200px;
-  height: auto !important;
+  height: auto;
   overflow: hidden;
 }
 

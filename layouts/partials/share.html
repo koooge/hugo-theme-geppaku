@@ -1,10 +1,13 @@
 {{ if .Site.Params.sharebutton }}
+{{ $url := printf "%s" .Permalink | absLangURL }}
 <div id="share-buttons">
   <ul>
     {{ if .Site.Params.sharebutton.x_twitter | default .Site.Params.sharebutton.twitter }}
+    {{ $user := .Site.Author.x_twitter | default .Site.Author.twitter }}
     <li>
-      <a href="https://twitter.com/share" class="twitter-share-button"{{ with .Site.Author.twitter }} data-via="{{ . }}"{{ end }}>Tweet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ $url }}&via={{ $user }}" target="_blank" aria-label="Share on X">
+        {{ partial "fontawesome.html" "square-x-twitter-brands-solid" }}
+      </a>
     </li>
     {{ end }}
     {{ if .Site.Params.sharebutton.facebook }}
@@ -35,6 +38,15 @@
         <a class="tumblr-share-button" data-color="blue" data-notes="right" href="https://embed.tumblr.com/share"></a>
         <script>!function(d,s,id){var js,ajs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://assets.tumblr.com/share-button.js";ajs.parentNode.insertBefore(js,ajs);}}(document, "script", "tumblr-js");</script>
     </li>
+    {{ end }}
+    {{ if .Site.Params.sharebutton.bluesky }}
+      {{ $text := printf "%s %s" .Title .Permalink }}
+      {{ with .Site.Author.bluesky }}{{ $text = printf "%s by @%s" $text . }}{{ end }}
+      <li>
+        <a href="https://bsky.app/intent/compose?text={{ $text | urlquery }}" target="_blank" aria-label="Share on Bluesky">
+          {{ partial "fontawesome.html" "square-bluesky-brands-solid" }}
+        </a>
+      </li>
     {{ end }}
   </ul>
 </div>
