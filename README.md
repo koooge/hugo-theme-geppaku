@@ -62,8 +62,6 @@ disqusShortname = ""
         facebook  = true
         tumblr    = true
         # hatena   = true # hatena is Japanese social media
-        google    = true
-        pocket    = true
         # Please set id when you want to display facebook
         facebookAppId = "your app id"
         bluesky   = true
