@@ -47,7 +47,7 @@ theme= "hugo-theme-geppaku"
 googleAnalytics = "" # Optional
 disqusShortname = "" # Optional
 
-[author]
+[params.author]
     # If you want to display author information set these
     # This is Optional values
     name = "Your name"

@@ -13,27 +13,27 @@
     </div>
   </div>
   {{ end }}
-  {{ if .Site.Author }}
+  {{ if .Site.Params.author }}
   <div class="sidebar-content">
     <div class="sidebar-header">
       <span>Author</span>
     </div>
     <div id="author">
-      <span>{{ .Site.Author.name }}</span>
+      <span>{{ .Site.Params.author.name }}</span>
       <div>
-        {{ with .Site.Author.x_twitter | default .Site.Author.twitter }}
+        {{ with .Site.Params.author.x_twitter | default .Site.Params.author.twitter }}
         <a href="https://x.com/{{ . }}" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "square-x-twitter-brands-solid"}}</a>
         {{ end }}
-        {{ with .Site.Author.github }}
+        {{ with .Site.Params.author.github }}
         <a href="https://github.com/{{ . }}" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "github-square" }}</a>
         {{ end }}
-        {{ with .Site.Author.linkedin }}
+        {{ with .Site.Params.author.linkedin }}
         <a href="https://www.linkedin.com/in/{{ . }}" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "linkedin" }}</a>
         {{ end }}
-        {{ with .Site.Author.tumblr }}
+        {{ with .Site.Params.author.tumblr }}
         <a href="https://{{ . }}.tumblr.com/" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "tumblr-square" }}</a>
         {{ end }}
-        {{ with .Site.Author.bluesky }}
+        {{ with .Site.Params.author.bluesky }}
         <a href="https://bsky.app/profile/{{ . }}" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "square-bluesky-brands-solid" }}</a>
         {{ end }}
       </div>
