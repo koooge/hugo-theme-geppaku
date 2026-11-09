@@ -17,6 +17,9 @@ disqusShortname = "" # Optional
     label = "Japanese"
     weight = 2
 
+[services.rss]
+    limit = 15
+
 [params.author]
     # If you want to display author information set these
     # This is Optional values

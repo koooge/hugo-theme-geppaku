@@ -38,6 +38,9 @@ googleAnalytics = ""
 disqusShortname = ""
 # enableRobotsTXT = true
 
+[services.rss]
+    limit = 15
+
 [params.author]
     # If you want to display author information set these
     # This is Optional values
