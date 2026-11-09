@@ -1,5 +1,5 @@
 baseurl = "http://your-site-here/"
-languageCode = "en-us"
+locale = "en-us"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 title = "your site title"
@@ -9,9 +9,11 @@ disqusShortname = "" # Optional
 
 [languages]
   [languages.en]
+    locale = "en-US"
     languageName = "English"
     weight = 1
   [languages.ja]
+    locale = "ja-JP"
     languageName = "Japanese"
     weight = 2
 
