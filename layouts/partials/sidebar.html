@@ -47,9 +47,9 @@
     </div>
     <div class="categories">
       <ul>
-        {{ range $category, $taxonomy := . }}
+        {{ range . }}
         <li>
-          <a href="{{ "/categories/" | relURL }}{{ $category | urlize }}"><span></span>{{ $category }} ({{ $taxonomy.Count }})</a>
+          <a href="{{ .Page.RelPermalink }}"><span></span>{{ .Page.LinkTitle }} ({{ .Count }})</a>
         </li>
         {{ end }}
       </ul>
