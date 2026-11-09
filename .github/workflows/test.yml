@@ -28,6 +28,8 @@ jobs:
         run: |
           export BASE_URL="https://koooge.github.io/hugo-theme-geppaku/"
           hugo --gc --minify --panicOnWarning --configDir ./exampleSite/config --config ./exampleSite/config/test/config.toml --themesDir ./ --layoutDir ./layouts --contentDir ./exampleSite/content --baseURL "${BASE_URL}"
+      - name: Validate HTML
+        run: npm run test:html
       - name: Check internal links and assets
         uses: lycheeverse/lychee-action@v2
         with:

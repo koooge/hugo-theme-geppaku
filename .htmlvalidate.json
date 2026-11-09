@@ -1,0 +1,14 @@
+{
+  "root": true,
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "missing-doctype": "error",
+    "no-missing-references": "error",
+    "attr-quotes": "off",
+    "no-inline-style": "off",
+    "wcag/h30": "off",
+    "prefer-native-element": "off",
+    "doctype-style": "off",
+    "unique-landmark": "off"
+  }
+}
