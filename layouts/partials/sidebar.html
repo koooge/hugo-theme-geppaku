@@ -56,14 +56,16 @@
     </div>
   </div>
   {{ end }}
+  {{ with .Site.Home.OutputFormats.Get "RSS" }}
   <div class="sidebar-content">
     <div class="sidebar-header">
       <span>RSS</span>
     </div>
     <div id="rss">
-      <a href="{{ $.Site.BaseURL }}index.xml" type="application/rss+xml" rel="noopener" target="_blank" class="inline-svg">
+      <a href="{{ .RelPermalink }}" type="application/rss+xml" rel="noopener" target="_blank" class="inline-svg">
         {{ partial "fontawesome.html" "rss-square" }}
       </a>
     </div>
   </div>
+  {{ end }}
 </div>
