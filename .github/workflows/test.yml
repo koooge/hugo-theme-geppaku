@@ -27,4 +27,11 @@ jobs:
       - name: Build
         run: |
           export BASE_URL="https://koooge.github.io/hugo-theme-geppaku/"
-          hugo --gc --minify --configDir ./exampleSite/config --config ./exampleSite/config/test/config.toml --themesDir ./ --layoutDir ./layouts --contentDir ./exampleSite/content --baseURL "${BASE_URL}"
+          hugo --gc --minify --panicOnWarning --configDir ./exampleSite/config --config ./exampleSite/config/test/config.toml --themesDir ./ --layoutDir ./layouts --contentDir ./exampleSite/content --baseURL "${BASE_URL}"
+      - name: Check internal links and assets
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --offline --no-progress --index-files index.html
+            --remap '^https://koooge\.github\.io/hugo-theme-geppaku/ file://${{ github.workspace }}/public/'
+            'public/**/*.html'
