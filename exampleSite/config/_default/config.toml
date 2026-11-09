@@ -1,5 +1,5 @@
 baseurl = "http://your-site-here/"
-languageCode = "en-us"
+locale = "en-us"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 title = "your site title"
@@ -9,10 +9,12 @@ disqusShortname = "" # Optional
 
 [languages]
   [languages.en]
-    languageName = "English"
+    locale = "en-US"
+    label = "English"
     weight = 1
   [languages.ja]
-    languageName = "Japanese"
+    locale = "ja-JP"
+    label = "Japanese"
     weight = 2
 
 [params.author]
@@ -47,3 +49,7 @@ disqusShortname = "" # Optional
         # 2. Please set file path name omitted "layouts/partials"
         # sidebar = "adsense/sidebar.html"
         # content = "adsense/content.html"
+
+# Render the inline HTML used in the sample articles.
+[markup.goldmark.renderer]
+    unsafe = true

@@ -31,7 +31,7 @@ See the Hugo documentation for more information.
 Example of config.toml file:
 ```toml
 baseurl = "http://your-site-here/"
-languageCode = "en-us"
+locale = "en-us"
 title = "your site title"
 theme = "hugo-theme-geppaku"
 googleAnalytics = ""
