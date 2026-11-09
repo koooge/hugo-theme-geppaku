@@ -1,42 +1,48 @@
-{{ if .Site.Params.sharebutton }}
+{{ $page := . }}
+{{ $services := .Site.Params.sharebuttons }}
+{{ if $services }}
+{{ $accounts := dict }}
+{{ with .Site.Params.author }}
+  {{ range .socials }}
+    {{ $accounts = merge $accounts (dict .service .id) }}
+  {{ end }}
+{{ end }}
 {{ $url := printf "%s" .Permalink | absLangURL }}
 <div class="share-buttons">
   <ul>
-    {{ if .Site.Params.sharebutton.x_twitter | default .Site.Params.sharebutton.twitter }}
-    {{ $user := .Site.Params.author.x_twitter | default .Site.Params.author.twitter }}
+  {{ range $service := $services }}
+    {{ if eq $service "x_twitter" }}
+    {{ $user := index $accounts "x_twitter" | default "" }}
     <li>
-      <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ $url }}&via={{ $user }}" target="_blank" aria-label="Share on X">
+      <a href="https://twitter.com/intent/tweet?text={{ $page.Title }}&url={{ $url }}&via={{ $user }}" target="_blank" aria-label="Share on X">
         {{ partial "fontawesome.html" "square-x-twitter-brands-solid" }}
       </a>
     </li>
-    {{ end }}
-    {{ if .Site.Params.sharebutton.facebook }}
-    {{ with .Site.Params.sharebutton.facebookAppId }}
+    {{ else if eq $service "facebook" }}
+    {{ with $page.Site.Params.facebookAppId }}
     <li>
-      <iframe src="https://www.facebook.com/plugins/share_button.php?href={{ $.Permalink | safeURL }}&layout=button_count&mobile_iframe=true&appId={{ . }}&width=89&height=20" width="89" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+      <iframe src="https://www.facebook.com/plugins/share_button.php?href={{ $page.Permalink | safeURL }}&layout=button_count&mobile_iframe=true&appId={{ . }}&width=89&height=20" width="89" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
     </li>
     {{ end }}
-    {{ end }}
-    {{ if .Site.Params.sharebutton.hatena }}
+    {{ else if eq $service "hatena" }}
     <li>
-      <a href="http://b.hatena.ne.jp/entry/{{ .Permalink }}/" class="hatena-bookmark-button" data-hatena-bookmark-title="{{ .Title }}" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+      <a href="http://b.hatena.ne.jp/entry/{{ $page.Permalink }}/" class="hatena-bookmark-button" data-hatena-bookmark-title="{{ $page.Title }}" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
     </li>
-    {{ end }}
-    {{ if .Site.Params.sharebutton.tumblr }}
+    {{ else if eq $service "tumblr" }}
     <li>
         <a class="tumblr-share-button" data-color="blue" data-notes="right" href="https://embed.tumblr.com/share"></a>
         <script>!function(d,s,id){var js,ajs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://assets.tumblr.com/share-button.js";ajs.parentNode.insertBefore(js,ajs);}}(document, "script", "tumblr-js");</script>
     </li>
-    {{ end }}
-    {{ if .Site.Params.sharebutton.bluesky }}
-      {{ $text := printf "%s %s" .Title .Permalink }}
-      {{ with .Site.Params.author.bluesky }}{{ $text = printf "%s by @%s" $text . }}{{ end }}
+    {{ else if eq $service "bluesky" }}
+      {{ $text := printf "%s %s" $page.Title $page.Permalink }}
+      {{ with (index $accounts "bluesky") }}{{ $text = printf "%s by @%s" $text . }}{{ end }}
       <li>
         <a href="https://bsky.app/intent/compose?text={{ $text | urlquery }}" target="_blank" aria-label="Share on Bluesky">
           {{ partial "fontawesome.html" "square-bluesky-brands-solid" }}
         </a>
       </li>
     {{ end }}
+  {{ end }}
   </ul>
 </div>
 {{ end }}

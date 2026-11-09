@@ -20,28 +20,21 @@ disqusShortname = "" # Optional
 [services.rss]
     limit = 15
 
+[params]
+    # Share buttons appear in this order. Use [] to hide all buttons.
+    sharebuttons = ["x_twitter", "bluesky"]
+    # Required only when "facebook" is included in sharebuttons.
+    # facebookAppId = "your app id"
+
 [params.author]
-    # If you want to display author information set these
-    # This is Optional values
     name = "Your name"
 
-    # Please set account ids
-    # This is Optional values
-    x_twitter  = "your twitter id"
-    linkedin   = "your linkedin id"
-    github     = "your github id"
-    bluesky    = "your bluesky id"
-
-[params]
-    [params.sharebutton]
-        # If you want to display share buttons set these
-        # This is Optional values
-        x_twitter  = true
-        # facebook = true
-        # hatena     = true # hatena is Japanese social media
-        # Please set id when you want to display facebook
-        # facebookAppId = "your app id"
-        bluesky    = true
+    socials = [
+        { service = "x_twitter", id = "your x id" },
+        { service = "linkedin", id = "your linkedin id" },
+        { service = "github", id = "your github id" },
+        { service = "bluesky", id = "your bluesky id" },
+    ]
 
     [params.adsense]
         # If you want to display Google adsense set these

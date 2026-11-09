@@ -21,20 +21,20 @@
     <div id="author">
       <span>{{ .Site.Params.author.name }}</span>
       <div>
-        {{ with .Site.Params.author.x_twitter | default .Site.Params.author.twitter }}
-        <a href="https://x.com/{{ . }}" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "square-x-twitter-brands-solid"}}</a>
-        {{ end }}
-        {{ with .Site.Params.author.github }}
-        <a href="https://github.com/{{ . }}" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "github-square" }}</a>
-        {{ end }}
-        {{ with .Site.Params.author.linkedin }}
-        <a href="https://www.linkedin.com/in/{{ . }}" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "linkedin" }}</a>
-        {{ end }}
-        {{ with .Site.Params.author.tumblr }}
-        <a href="https://{{ . }}.tumblr.com/" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "tumblr-square" }}</a>
-        {{ end }}
-        {{ with .Site.Params.author.bluesky }}
-        <a href="https://bsky.app/profile/{{ . }}" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "square-bluesky-brands-solid" }}</a>
+        {{ range .Site.Params.author.socials }}
+          {{ if .id }}
+            {{ if eq .service "x_twitter" }}
+            <a href="https://x.com/{{ .id }}/" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "square-x-twitter-brands-solid" }}</a>
+            {{ else if eq .service "github" }}
+            <a href="https://github.com/{{ .id }}/" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "github-square" }}</a>
+            {{ else if eq .service "linkedin" }}
+            <a href="https://www.linkedin.com/in/{{ .id }}/" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "linkedin" }}</a>
+            {{ else if eq .service "tumblr" }}
+            <a href="https://{{ .id }}.tumblr.com/" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "tumblr-square" }}</a>
+            {{ else if eq .service "bluesky" }}
+            <a href="https://bsky.app/profile/{{ .id }}" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "square-bluesky-brands-solid" }}</a>
+            {{ end }}
+          {{ end }}
         {{ end }}
       </div>
     </div>
