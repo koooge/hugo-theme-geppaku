@@ -49,3 +49,7 @@ disqusShortname = "" # Optional
         # 2. Please set file path name omitted "layouts/partials"
         # sidebar = "adsense/sidebar.html"
         # content = "adsense/content.html"
+
+# Render the inline HTML used in the sample articles.
+[markup.goldmark.renderer]
+    unsafe = true
