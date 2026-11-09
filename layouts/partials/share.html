@@ -1,6 +1,6 @@
 {{ if .Site.Params.sharebutton }}
 {{ $url := printf "%s" .Permalink | absLangURL }}
-<div id="share-buttons">
+<div class="share-buttons">
   <ul>
     {{ if .Site.Params.sharebutton.x_twitter | default .Site.Params.sharebutton.twitter }}
     {{ $user := .Site.Params.author.x_twitter | default .Site.Params.author.twitter }}
