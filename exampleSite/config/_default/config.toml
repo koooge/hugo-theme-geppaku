@@ -10,11 +10,11 @@ disqusShortname = "" # Optional
 [languages]
   [languages.en]
     locale = "en-US"
-    languageName = "English"
+    label = "English"
     weight = 1
   [languages.ja]
     locale = "ja-JP"
-    languageName = "Japanese"
+    label = "Japanese"
     weight = 2
 
 [params.author]
