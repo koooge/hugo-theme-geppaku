@@ -3,7 +3,7 @@
 <div id="share-buttons">
   <ul>
     {{ if .Site.Params.sharebutton.x_twitter | default .Site.Params.sharebutton.twitter }}
-    {{ $user := .Site.Author.x_twitter | default .Site.Author.twitter }}
+    {{ $user := .Site.Params.author.x_twitter | default .Site.Params.author.twitter }}
     <li>
       <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ $url }}&via={{ $user }}" target="_blank" aria-label="Share on X">
         {{ partial "fontawesome.html" "square-x-twitter-brands-solid" }}
@@ -41,7 +41,7 @@
     {{ end }}
     {{ if .Site.Params.sharebutton.bluesky }}
       {{ $text := printf "%s %s" .Title .Permalink }}
-      {{ with .Site.Author.bluesky }}{{ $text = printf "%s by @%s" $text . }}{{ end }}
+      {{ with .Site.Params.author.bluesky }}{{ $text = printf "%s by @%s" $text . }}{{ end }}
       <li>
         <a href="https://bsky.app/intent/compose?text={{ $text | urlquery }}" target="_blank" aria-label="Share on Bluesky">
           {{ partial "fontawesome.html" "square-bluesky-brands-solid" }}
