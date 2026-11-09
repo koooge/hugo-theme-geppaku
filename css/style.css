@@ -515,13 +515,13 @@ h4::before {
   color: #747474;
 }
 
-#share-buttons {
+.share-buttons {
   clear: left;
   margin-bottom: 20px;
   overflow: auto;
 }
 
-#share-buttons li {
+.share-buttons li {
   float: left;
   list-style: none;
   margin-right: 10px;
