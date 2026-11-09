@@ -104,6 +104,25 @@ tags = [
 Hello Hugo!
 ```
 
+## Mathematics
+
+Hugo renders LaTeX expressions to MathML at build time, without client-side
+JavaScript or external stylesheets. Enable the passthrough extension in your site
+configuration:
+
+```toml
+[markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)']]
+```
+
+Use `\( ... \)` for inline math and `$$ ... $$` or `\[ ... \]` for display math.
+Single dollar signs remain ordinary text, so prices are not interpreted as math.
+Expressions must be supported by Hugo's embedded KaTeX engine; invalid
+expressions fail the build.
+
 ## Preview
 
 ```sh
