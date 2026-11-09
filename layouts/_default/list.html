@@ -5,7 +5,11 @@
     <h1>Archive: <span id="archive-value">{{ .Title }}</span></h1>
   </div>
   {{ end }}
-  {{ $paginator := .Paginate (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
+  {{ $pages := .Pages }}
+  {{ if .IsHome }}
+    {{ $pages = where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
+  {{ end }}
+  {{ $paginator := .Paginate $pages }}
   {{ range $paginator.Pages }}
   <div class="article">
     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
@@ -17,7 +21,6 @@
   {{ end }}
   <nav>
     <div id="pager">
-      {{ $paginator := .Paginate (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
       {{ template "_internal/pagination.html" . }}
     </div>
   </nav>
