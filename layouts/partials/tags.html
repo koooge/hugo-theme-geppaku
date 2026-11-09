@@ -1,9 +1,9 @@
-{{if .Params.tags }}
+{{ with .GetTerms "tags" }}
 <div class="tags">
   <ul>
-    {{ range .Params.tags }}
+    {{ range . }}
     <li>
-        <a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
     </li>
     {{ end }}
   </ul>
