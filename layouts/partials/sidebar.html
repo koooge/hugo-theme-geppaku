@@ -33,6 +33,8 @@
             <a href="https://{{ .id }}.tumblr.com/" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "tumblr-square" }}</a>
             {{ else if eq .service "bluesky" }}
             <a href="https://bsky.app/profile/{{ .id }}" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "square-bluesky-brands-solid" }}</a>
+            {{ else if eq .service "slideshare" }}
+            <a href="https://www.slideshare.net/{{ .id }}/" rel="noopener" target="_blank" class="inline-svg">{{ partial "fontawesome.html" "slideshare" }}</a>
             {{ end }}
           {{ end }}
         {{ end }}
