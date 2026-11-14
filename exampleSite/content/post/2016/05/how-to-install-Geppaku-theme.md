@@ -64,6 +64,7 @@ disqusShortname = "" # Optional
         { service = "linkedin", id = "your linkedin id" },
         { service = "github", id = "your github id" },
         { service = "bluesky", id = "your bluesky id" },
+        { service = "slideshare", id = "your slideshare id" },
     ]
 
     [params.adsense]

@@ -57,6 +57,7 @@ disqusShortname = ""
         { service = "github", id = "your github id" },
         { service = "tumblr", id = "your tumblr id" },
         { service = "bluesky", id = "your bluesky id" },
+        { service = "slideshare", id = "your slideshare id" },
     ]
 
     [params.adsense]
